@@ -1,0 +1,4 @@
+[main]
+customMatcher = com.test.CustomCredentialsMatcher
+myRealm = com.test.CustomAuthorizingRealm
+myRealm.credentialsMatcher = $customMatcher

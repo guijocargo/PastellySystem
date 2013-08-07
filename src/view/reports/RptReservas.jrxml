@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelReservas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fa7ed0e-3f37-40d3-b9ee-598fe15e72c8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     t_reserva.`DataReserva` AS t_reserva_DataReserva,
+     t_reserva.`HoraInicio` AS t_reserva_HoraInicio,
+     t_reserva.`HoraFim` AS t_reserva_HoraFim,
+     t_detreserva.`CodMesa` AS t_detreserva_CodMesa,
+     t_cliente.`NomeCliente` AS t_cliente_NomeCliente
+FROM
+     `t_reserva` t_reserva INNER JOIN `t_detreserva` t_detreserva ON t_reserva.`CodReserva` = t_detreserva.`CodReserva`
+     INNER JOIN `t_cliente` t_cliente ON t_reserva.`CodCliente` = t_cliente.`CodCliente`]]>
+	</queryString>
+	<field name="t_reserva_DataReserva" class="java.sql.Date"/>
+	<field name="t_reserva_HoraInicio" class="java.sql.Time"/>
+	<field name="t_reserva_HoraFim" class="java.sql.Time"/>
+	<field name="t_detreserva_CodMesa" class="java.lang.Integer"/>
+	<field name="t_cliente_NomeCliente" class="java.lang.String"/>
+	<group name="t_reserva_DataReserva">
+		<groupExpression><![CDATA[$F{t_reserva_DataReserva}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement uuid="b3388c19-7a5d-486d-950e-47d23b5497bb" mode="Opaque" x="0" y="7" width="555" height="24" forecolor="#B89F7D" backcolor="#000000"/>
+					<textField isStretchWithOverflow="true">
+						<reportElement uuid="8c18c184-ff4d-4c62-8145-8a9c3d8f0af5" style="SubTitle" isPrintRepeatedValues="false" x="2" y="0" width="479" height="24" forecolor="#FFFFFF"/>
+						<textElement>
+							<font isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{t_reserva_DataReserva}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement uuid="677e4448-059d-4b30-a6a1-4955933ab6fe" x="456" y="0" width="99" height="132"/>
+				<imageExpression><![CDATA["pastel1.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement uuid="4139f599-c10f-478d-a96b-04aad67b511f" mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="ae64a191-d6fc-4d72-8674-05f77fed83a9" style="Title" x="0" y="0" width="370" height="66"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Relatórios]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="71187eab-19e2-4787-b050-00c85d58674a" style="SubTitle" x="157" y="66" width="249" height="29"/>
+					<textElement>
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Reservas]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="9c5ff196-a9fe-4ef2-839b-3d52205ae1ef" mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="36856365-2df7-47a7-ad11-ec3d954ebace" x="307" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b6f7616b-9cea-4abe-87de-b1c849086fd1" style="Column header" x="0" y="7" width="138" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Início]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e7d1548a-e738-45db-857f-e6a6137fd76b" style="Column header" x="138" y="7" width="138" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bf2ee713-a83b-4277-8159-d5570817ea3b" style="Column header" x="276" y="7" width="138" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Número da Mesa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6dd1710-8a9b-4d7f-81e4-98b25e3f88c5" style="Column header" x="414" y="7" width="138" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nome Cliente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement uuid="6fa6a950-e2d0-4cf1-9186-925910a47c46" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
+				<textField isStretchWithOverflow="true" pattern="HH:mm">
+					<reportElement uuid="282f612b-d918-461b-965d-9e389da72354" style="Detail" positionType="Float" x="0" y="0" width="138" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{t_reserva_HoraInicio}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="HH:mm">
+					<reportElement uuid="3315bf1f-fe74-4268-87ce-541fdd34a1bd" style="Detail" positionType="Float" x="138" y="0" width="138" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{t_reserva_HoraFim}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="30018fd5-6c2f-4e6b-b8ff-9cd1abbe50dc" style="Detail" positionType="Float" x="276" y="0" width="138" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{t_detreserva_CodMesa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="2a8de4f0-8505-4000-8928-0b2d8faed26b" style="Detail" positionType="Float" x="414" y="0" width="138" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{t_cliente_NomeCliente}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="dc622b25-bf88-47da-bba1-9dcc9242353d" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="34199439-625e-4bef-b383-302ab125fdaa" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="87db9501-9319-4755-bc86-eeceb3226dd7" style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="82222a94-9587-41dd-aecd-76a6f0c06560" style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="d5422a7f-aad3-4fac-a4c3-7856ac482334" style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

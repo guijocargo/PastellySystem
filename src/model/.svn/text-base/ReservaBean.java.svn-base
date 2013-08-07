@@ -1,0 +1,71 @@
+package model;
+
+import java.sql.Time;
+import java.util.Date;
+
+public class ReservaBean {
+
+    private int CodReserva;
+    private int CodCli;
+    private int CodUsuario;
+    private Date DtReserva;
+    private Time HoraInicio;
+    private Time HoraFim;
+    private int CodDetReserva;
+
+    public int getCodCli() {
+        return CodCli;
+    }
+
+    public void setCodCli(int CodCli) {
+        this.CodCli = CodCli;
+    }
+
+    public int getCodDetReserva() {
+        return CodDetReserva;
+    }
+
+    public void setCodDetReserva(int CodDetReserva) {
+        this.CodDetReserva = CodDetReserva;
+    }
+
+    public int getCodReserva() {
+        return CodReserva;
+    }
+
+    public void setCodReserva(int CodReserva) {
+        this.CodReserva = CodReserva;
+    }
+
+    public int getCodUsuario() {
+        return CodUsuario;
+    }
+
+    public void setCodUsuario(int CodUsuario) {
+        this.CodUsuario = CodUsuario;
+    }
+
+    public Date getDtReserva() {
+        return DtReserva;
+    }
+
+    public void setDtReserva(Date DtReserva) {
+        this.DtReserva = DtReserva;
+    }
+
+    public Time getHoraFim() {
+        return HoraFim;
+    }
+
+    public void setHoraFim(Time HoraFim) {
+        this.HoraFim = HoraFim;
+    }
+
+    public Time getHoraInicio() {
+        return HoraInicio;
+    }
+
+    public void setHoraInicio(Time HoraInicio) {
+        this.HoraInicio = HoraInicio;
+    }
+}

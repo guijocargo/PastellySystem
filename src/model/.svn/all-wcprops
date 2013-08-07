@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model
+END
+UserBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model/UserBean.java
+END
+ConnectionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model/ConnectionFactory.java
+END
+ClienteBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model/ClienteBean.java
+END
+DetReservaBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model/DetReservaBean.java
+END
+ReservaBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/model/ReservaBean.java
+END

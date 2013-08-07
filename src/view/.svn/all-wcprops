@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view
+END
+FrmLogin.form
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmLogin.form
+END
+FrmSobre.form
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmSobre.form
+END
+FrmCadastroProduto.form
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmCadastroProduto.form
+END
+frmReservaMesa.form
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/frmReservaMesa.form
+END
+FrmConsultaClientes.form
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmConsultaClientes.form
+END
+frmConsultaReserva.form
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/frmConsultaReserva.form
+END
+FrmNovaVenda.form
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmNovaVenda.form
+END
+FrmMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmMenu.java
+END
+FrmCadastroCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmCadastroCliente.java
+END
+FrmBackup.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmBackup.java
+END
+FrmLogin.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmLogin.java
+END
+FrmConsultaProdutos.form
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmConsultaProdutos.form
+END
+FrmSobre.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmSobre.java
+END
+FrmCadastroProduto.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmCadastroProduto.java
+END
+frmReservaMesa.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/frmReservaMesa.java
+END
+FrmConsultaClientes.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmConsultaClientes.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/Main.java
+END
+frmConsultaReserva.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/frmConsultaReserva.java
+END
+FrmNovaVenda.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmNovaVenda.java
+END
+FrmMenu.form
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmMenu.form
+END
+FrmCadastroCliente.form
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmCadastroCliente.form
+END
+FrmBackup.form
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmBackup.form
+END
+FrmConsultaProdutos.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/11/trunk/prjPastellySystem/src/view/FrmConsultaProdutos.java
+END
